@@ -4,10 +4,11 @@ import com.group.pontointeligente.api.entities.Empresa;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.transaction.Transactional;
+import java.util.Optional;
 
 public interface EmpresaRepository extends JpaRepository<Empresa, Long> {
 
-    // O spring cria o select automaticamente
+    // Spring cria o select automaticamente
     @Transactional
     Empresa findByCnpj(String cnpj);
 }
