@@ -2,7 +2,6 @@ package com.group.pontointeligente.api.repositories;
 
 import com.group.pontointeligente.api.entities.Funcionario;
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import javax.transaction.Transactional;
 
 @Transactional

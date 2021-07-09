@@ -1,7 +1,6 @@
 package com.group.pontointeligente.api.services;
 
 import com.group.pontointeligente.api.entities.Funcionario;
-
 import java.util.Optional;
 
 public interface FuncionarioService {
