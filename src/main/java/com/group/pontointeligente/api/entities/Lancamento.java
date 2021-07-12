@@ -28,7 +28,7 @@ public class Lancamento implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(Long id) {
@@ -38,7 +38,7 @@ public class Lancamento implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "data", nullable = false)
     public Date getData() {
-        return this.data;
+        return data;
     }
 
     public void setData(Date data) {
@@ -47,7 +47,7 @@ public class Lancamento implements Serializable {
 
     @Column(name = "descricao", nullable = true)
     public String getDescricao() {
-        return this.descricao;
+        return descricao;
     }
 
     public void setDescricao(String descricao) {
@@ -56,7 +56,7 @@ public class Lancamento implements Serializable {
 
     @Column(name = "localizacao", nullable = true)
     public String getLocalizacao() {
-        return this.localizacao;
+        return localizacao;
     }
 
     public void setLocalizacao(String localizacao) {
@@ -65,7 +65,7 @@ public class Lancamento implements Serializable {
 
     @Column(name = "data_criacao", nullable = false)
     public Date getDataCriacao() {
-        return this.dataCriacao;
+        return dataCriacao;
     }
 
     public void setDataCriacao(Date dataCriacao) {
@@ -74,7 +74,7 @@ public class Lancamento implements Serializable {
 
     @Column(name = "data_atualizacao", nullable = false)
     public Date getDataAtualizacao() {
-        return this.dataAtualizacao;
+        return dataAtualizacao;
     }
 
     public void setDataAtualizacao(Date dataAtualizacao) {
@@ -84,7 +84,7 @@ public class Lancamento implements Serializable {
     @Enumerated(EnumType.STRING)
     @Column(name = "tipo", nullable = false)
     public TipoEnum getTipo() {
-        return this.tipo;
+        return tipo;
     }
 
     public void setTipo(TipoEnum tipo) {
@@ -94,7 +94,7 @@ public class Lancamento implements Serializable {
     // Fetch tipo eager serve para trazer o funcionario sempre que buscar um lancameto
     @ManyToOne(fetch = FetchType.EAGER)
     public Funcionario getFuncionario() {
-        return this.funcionario;
+        return funcionario;
     }
 
     public void setFuncionario(Funcionario funcionario) {

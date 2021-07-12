@@ -24,7 +24,7 @@ public class Empresa implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(Long id) {
@@ -33,7 +33,7 @@ public class Empresa implements Serializable {
 
     @Column(name = "razao_social", nullable = false)
     public String getRazaoSocial() {
-        return this.razaoSocial;
+        return razaoSocial;
     }
 
     public void setRazaoSocial(String razaoSocial) {
@@ -42,7 +42,7 @@ public class Empresa implements Serializable {
 
     @Column(name = "cnpj", nullable = false)
     public String getCnpj() {
-        return this.cnpj;
+        return cnpj;
     }
 
     public void setCnpj(String cnpj) {
@@ -51,7 +51,7 @@ public class Empresa implements Serializable {
 
     @Column(name = "data_criacao", nullable = false)
     public Date getDataCriacao() {
-        return this.dataCriacao;
+        return dataCriacao;
     }
 
     public void setDataCriacao(Date dataCriacao) {
@@ -60,7 +60,7 @@ public class Empresa implements Serializable {
 
     @Column(name = "data_atualizacao", nullable = false)
     public Date getDataAtualizacao() {
-        return this.dataAtualizacao;
+        return dataAtualizacao;
     }
 
     public void setDataAtualizacao(Date dataAtualizacao) {
@@ -73,7 +73,7 @@ public class Empresa implements Serializable {
      */
     @OneToMany(mappedBy = "empresa", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     public List<Funcionario> getFuncionarios() {
-        return this.funcionarios;
+        return funcionarios;
     }
 
     public void setFuncionarios(List<Funcionario> funcionarios) {

@@ -116,7 +116,7 @@ public class Funcionario implements Serializable {
     // Transient é uma annotation que indica que um atributo não está relacionado a uma coluna do banco
     @Transient
     public Optional<Float> getQtdHorasAlmocoOpt() {
-        return Optional.ofNullable(this.qtdHorasAlmoco);
+        return Optional.ofNullable(qtdHorasAlmoco);
     }
 
     public void setQtdHorasAlmoco(Float qtdHorasAlmoco) {
@@ -126,7 +126,7 @@ public class Funcionario implements Serializable {
     @Enumerated(EnumType.STRING)
     @Column(name = "perfil", nullable = false)
     public PerfilEnum getPerfil() {
-        return this.perfil;
+        return perfil;
     }
 
     public void setPerfil(PerfilEnum perfil) {
@@ -135,7 +135,7 @@ public class Funcionario implements Serializable {
 
     @Column(name = "data_criacao", nullable = false)
     public Date getDataCriacao() {
-        return this.dataCriacao;
+        return dataCriacao;
     }
 
     public void setDataCriacao(Date dataCriacao) {
@@ -144,7 +144,7 @@ public class Funcionario implements Serializable {
 
     @Column(name = "data_atualizacao", nullable = false)
     public Date getDataAtualizacao() {
-        return this.dataAtualizacao;
+        return dataAtualizacao;
     }
 
     public void setDataAtualizacao(Date dataAtualizacao) {
@@ -153,7 +153,7 @@ public class Funcionario implements Serializable {
 
     @ManyToOne(fetch = FetchType.EAGER)
     public Empresa getEmpresa() {
-        return this.empresa;
+        return empresa;
     }
 
     public void setEmpresa(Empresa empresa) {
@@ -162,7 +162,7 @@ public class Funcionario implements Serializable {
 
     @OneToMany(mappedBy = "funcionario", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     public List<Lancamento> getLancamentos() {
-        return this.lancamentos;
+        return lancamentos;
     }
 
     public void setLancamentos(List<Lancamento> lancamentos) {
